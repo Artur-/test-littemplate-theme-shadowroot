@@ -1,20 +1,18 @@
-import { html, LitElement, customElement } from 'lit-element';
-import '@vaadin/vaadin-form-layout';
-import '@vaadin/vaadin-ordered-layout/vaadin-horizontal-layout';
-import '@vaadin/vaadin-button';
-import '@vaadin/vaadin-text-field/vaadin-password-field';
-import '@vaadin/vaadin-text-field';
-import '@vaadin/vaadin-custom-field';
-import '@vaadin/vaadin-select';
+import { html, LitElement, customElement } from "lit-element";
+import "@vaadin/vaadin-form-layout";
+import "@vaadin/vaadin-ordered-layout/vaadin-horizontal-layout";
+import "@vaadin/vaadin-button";
+import "@vaadin/vaadin-text-field/vaadin-password-field";
+import "@vaadin/vaadin-text-field";
+import "@vaadin/vaadin-custom-field";
+import "@vaadin/vaadin-select";
 
-
-
-@customElement('hello-world-view')
+@customElement("hello-world-view")
 export class HelloWorldView extends LitElement {
-  createRenderRoot() {
-    // Do not use a shadow root
-    return this;
-  }
+  // createRenderRoot() {
+  //   // Do not use a shadow root
+  //   return this;
+  // }
 
   render() {
     return html`<h3>Credit Card</h3>
@@ -28,11 +26,23 @@ export class HelloWorldView extends LitElement {
           pattern="[\\d ]*"
           prevent-invalid-input
         ></vaadin-text-field>
-        <vaadin-text-field label="Cardholder name" id="cardholderName" colspan=""></vaadin-text-field>
+        <vaadin-text-field
+          label="Cardholder name"
+          id="cardholderName"
+          colspan=""
+        ></vaadin-text-field>
         <vaadin-custom-field label="Expiration date">
           <vaadin-horizontal-layout theme="spacing">
-            <vaadin-select placeholder="Month" id="expirationMonth" style="flex-grow: 1; width: 100px;"></vaadin-select>
-            <vaadin-select placeholder="Year" id="expirationYear" style="flex-grow: 1; width: 100px;"></vaadin-select>
+            <vaadin-select
+              placeholder="Month"
+              id="expirationMonth"
+              style="flex-grow: 1; width: 100px;"
+            ></vaadin-select>
+            <vaadin-select
+              placeholder="Year"
+              id="expirationYear"
+              style="flex-grow: 1; width: 100px;"
+            ></vaadin-select>
           </vaadin-horizontal-layout>
         </vaadin-custom-field>
         <vaadin-password-field
